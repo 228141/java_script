@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados e Variáveis</title>
+</head>
+<body>
+    <h2>Comentários</h2>
+    <p>Para comentar é posível utilizar o // para comentar em uma única linha. <br>
+        E pode ser utilizado para abrir /* e para fechar o */ para comentar em mais de uma linha. <br>
+        <br>
+        Exemplo abaixo: <br>
+        <br>
+        window.alert('Minha Primeira Mensagem!') // comentário em uma linha <br>
+        <br>
+        /* 
+        window.confirm('Está gostando do curso?')
+        window.prompt('Qual o seu nome?')
+        */</p>
+
+    <h2>Variável</h2>
+
+    <h3>Tipos Primitivos</h3>
+    <p>
+        Tipo Primitivo Descrição Exemplo
+        String        / Sequência de caracteres para representar textos.                    / let nome = "Maria";
+        Number        / Representa números (inteiros e decimais).                           / let idade = 25;
+        Boolean       / Valor lógico: true (verdadeiro) ou false (falso).                   / let ativo = true;
+        Undefined     / Dado que foi declarado, mas ainda não recebeu nenhum valor.         / let resposta;
+        Null          / Ausência intencional de qualquer valor.                             / let dado = null;
+        Symbol        / Identificador único e imutável, usado muito para chaves de objetos. / let id = Symbol("id");
+        BigIntNúmeros / inteiros grandes que ultrapassam o limite seguro do Number.         / let grande = 123n;
+        Object        / a linguagem JS tem este como um tipo primitivo
+        function      / Também é considerado um tipo primitivo em JS  <br><br>
+
+        Existe outros valores internos dentro dos tipos primitivos, por exemplo:
+
+        O NUMBER tem dois valores internos importantes, o "Infity" e o "NaN" (not and number)
+
+            O que é Infinity?
+            Representa o infinito matemático. 
+            Ocorre quando uma operação matemática excede o limite máximo que o JavaScript consegue representar, ou quando ocorre uma divisão por zero.
+            
+            Exemplo: 1 / 0 resulta em Infinity.
+            
+            Existe também o -Infinity (infinito negativo), retornado ao dividir um número negativo por zero.
+            Útil para comparações onde você precisa de um valor maior (ou menor) do que qualquer outro número existente.
+            
+            O que é NaN?
+            É a sigla para Not a Number (Não é um Número). 
+            Ele é gerado quando ocorre um erro computacional ou quando uma operação matemática resulta em um valor indefinido.
+            
+            Exemplo: Tentar multiplicar uma String por um número (ex: "texto" * 2) resulta em NaN.
+            
+            O NaN é persistente: qualquer operação matemática que envolva um NaN retornará NaN.
+            
+            Atenção: Ele é o único valor no JavaScript que não é igual a si mesmo. Portanto, para verificar se um dado é NaN, deve-se usar a função global isNaN() em vez dos operadores de igualdade tradicionais.
+    </p>
+
+    <h3>Comando para saber o tipo primitivo</h3>
+    <p>
+        O comando para saber o tipo primitivo é o (typeof)
+
+        Exemplo:
+
+        var n = 200
+        typeof n 
+        'number'
+
+        n = "Google"     
+        typeof n
+        'string'
+        typeof 6
+        'number'
+        typeof 6.5
+        'number'
+        typeof "6.5"
+        'string'
+        typeof []
+        'Object'
+        typeof {}
+        'Object'
+        typeof function(){}
+        'function'
+        typeof Undefined
+        'Undefined'
+        typeof NaN
+        'number'
+        typeof Infinity
+        'number'
+        typeof null
+        'Object' // para o JS o null é um objeto
+
+    </p>
+
+    <p>
+        O sinal de igual (=) le-se "RECEBE"<br>
+        É possível que o valor da variável fique sem nennhum valor dentro, inserindo o valor "null" na variável. <br>
+        Na memória do computador é possível criar os espaços de variáveis dentro do computador, chamamos de "VAR". <br>
+        Pode ser criado alguns tipos de variáveis (var) como números e caracteres. <br>
+        Por exemplo: <br> 
+        Recebe números <br> 
+        var n1 = 5 <br>
+        var n2 = 8 <br>
+        var n3 = 10 <br><br>
+
+        Recebe caracteres <br>
+        var s1 = 'JavaScript' <br>
+        var s2 = 'Curso' <br>
+        var s3 = 'Curso de JavaScript' <br><br>
+    </p>
+
+    <h2>Identificadores</h2>
+    <p>
+        Pode começar com letra, $ ou _ <br>
+        Não podem começar com números <br>
+        É possível usar letras ou números <br>
+        É possível usar acentos e símbolos <br>
+        Não podem conter espaços <br>
+        Não podem ser palavras reservadas <br>
+    </p>    
+
+    <h2>Dicas</h2>
+    <p>
+        Maiusculas e minusculas fazem a diferença <br>
+        Tente escolher nomes coerentes para as variáveis <br>
+        Evite se tornar um programador alfabeto ou um programador contador <br>
+    </p>    
+
+</body>
+</html>

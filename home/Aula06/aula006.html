@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tratamento de Dados</title>
+    <style>
+        body {
+            background-color: rgb(108, 107, 155); /* Comentário em CSS */
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(161, 161, 119);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Conversão números</h1>
+    <p>
+    Number.parseInt // Converte para números inteiros <br>
+       
+    Number.parseFloat // converte para números com pontos flutuante <br>
+
+    Number // o JavaScript já entende o número digitado e já converte de acordo com a digitação. <br>
+
+    Para converter para string pode ser feito de duas maneira, usando "String(n)" ou "n.toString()" <br>
+    </p>
+
+    <h2>Formatando Strings</h2>
+    <p>
+
+    Exemplo 01: <br>
+    <br>
+    var s = 'JavaScript' <br> <br>
+    Ao dar o comando 'Eu estou estudando s' para mostrar na tela não faz interpolação. <br>
+    Vai mostrar 'Eu estou estudando s' <br><br>
+
+    Para concatenar a variável guardada use o "+" para faze a concatenação: 'Eu estou estudando ' + s <br>
+    Vai mostrar 'Eu estou estudando JavaScript' <br>
+    <br>
+
+    Exemplo 02: <br>
+    <br>
+    Usa template string ${variável} e tem que usar a craze (`) <br>
+    `Eu estou estudando ${s}` <br>
+    <br>
+    Por exemplo: <br>
+    <br>
+    nome = 'Jailton' <br>
+    idade = 45<br>
+    nota = 9.5<br>
+    <br>
+    Usando a concatenação: 'O aluno' + nome + 'com' + idade + 'anos tirou a nota' + nota <br>
+    Apresentará na tela: O aluno Jailton com 45 anos tirou a nota 9.5<br>
+    <br>
+
+    Usando template string: `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`  <br>
+    Apresentará: O aluno Jailton com 45 anos tirou a nota 9.5 <br>
+    <br>
+
+    <h2>Transformar e contar Strings</h2>
+
+    Existem outras informações sobre string. <br>
+    <br>
+        Vamos declarar a variável (var nome = Jailton) <br>
+    <br>
+
+    Por exemplo o ".length" que contará a quantidade de caracteres sendo um atributo. <br>
+    <br>
+
+    Exemplo: <br>
+        var nome = window.prompt('Qual é o seu nome: ') //faz a pergunta na tela <br>
+        document.write(`Seu nome tem ${nome.length} letras.`) // conta quantos caracteres a string tem <br>
+    <br>
+
+    Outro exemplo é o ".toUpperCase()" que transforma tudo para MAIÚSCULAS. <br>
+    <br>
+    
+    Exemplo: <br>
+        var nome = window.prompt('Qual é o seu nome: ') //faz a pergunta na tela <br>
+        document.write(`E seu nome em letras maiúsculas é ${nome.toUpperCase()}.`) // transforma tudo em maiúsculas. <br>
+    <br>
+    
+    Outro exemplo é o "toLowerCase()" que transforma tudo para minúsculas. <br>
+    <br>
+    
+    Exemplo: <br>
+        var nome = window.prompt('Qual é o seu nome: ') //faz a pergunta na tela <br>
+        document.write(`E seu nome em letras minúsculas é ${nome.toLowerCase()}.`) // transforma tudo em minúsculas. <br>
+    <br>
+
+    </p>
+
+    <h2>Formatando Números</h2>
+
+    Exemplo: <br>
+
+    var n1 = 1545.5 <br>
+    n1 <br>
+    '1545.5' // mostra a variável <br>
+    <br>
+
+    comando "toFixed" <br>
+    n1.toFixed(2) // mostra o número com duas casas decimais <br>
+    '1545.50'<br>
+    <br>
+
+    comando .replace // transforma algo na ante e depois <br>
+    n1.toFixed(2).replace('.' , ',') transforma o "ponto" para "vírgula" <br>
+    mostra na tela: '1545,50' <br>
+    <br>
+    
+    comando para transformar em moeda (Real Brasil) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BR'}) <br>
+    mostra na tela: 'R$ 1,545.50' <br>
+    <br>
+
+    comando para transformar em moeda (Dolar) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) <br>
+    mostra na tela: 'US$ 1,545.50' <br>
+    <br>
+
+    comando para transformar em moeda (Euro) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) <br>
+    mostra na tela: '€ 1,545.50'<br>
+
+
+</body>
+</html>
+
