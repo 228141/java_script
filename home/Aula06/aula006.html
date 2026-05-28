@@ -113,8 +113,21 @@
     mostra na tela: '1545,50' <br>
     <br>
     
+//-------
+
+    Observação: Você precisa converter o valor para número usando Number():
+    <script>
+    var real = Number(window.prompt('Quantos reais você tem? '))
+    
+    document.write(`Você tem ${real.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })}.`)
+</script>
+//---------
+
     comando para transformar em moeda (Real Brasil) <br>
-    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BR'}) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) <br>
     mostra na tela: 'R$ 1,545.50' <br>
     <br>
 

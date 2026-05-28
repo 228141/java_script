@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <h1>Operadores no JS</h1>
+    <p> aritiméticos</p>
+    <p>
+        Operadores +, -, *, /, %, **
+        5 + 2 resultado: 7
+        5 - 2 resultado: 3
+        5 * 2 resultado: 10
+        5 / 2 resultado: 2.5
+        5 % 2 resultado: 1 (operador de resto da divisão inteira 5/2 = 2 resta 1 que é o resultado dessa conta)
+        5 ** 2 resultado: 25 (operador é a potência, o 5 multiplicado por ele mesmo duas vezes 5*5=25)        
+    </p>
+    <p>
+        Cuidado com o uso dos operadores, devido a precedência dos operadores:
+        
+        Exemplo: 5 + 3 / 2, qual o resultado? o correto é 6.5
+        
+        Precedência:
+        1º () os parentêses
+        2º ** as potências
+        3º * / %
+        4º + - 
+
+        Exemplo: (5 + 3) / 2, qual o resultado? daí o resultado é 4
+    </p>
+    <p>
+        Atribuição simples:
+
+        var a = 5 + 3         resultado 8
+        var b = a % 5         resultado 3
+        var c = 5 * b ** 2    resultado 45
+        var d = 10 - a / 2    resultado 6
+        var e = 6 * 2 / d     resultado 2 
+        var f = b % e + 4 / e resultado 3
+    </p>
+    <p>
+        Auto Atribuição:
+        var n = 3 resultado 3
+        n = n + 4 soma valor e o resultado passa a valer 7
+        n = n - 5 dimunui valor e o resultado passa a valer 2
+        n = n * 4 mutiplicou valor e o resultado passa a valer 8
+        n = n / 2 dividiu valor e o resultado passa a valer 4
+        n = n ** 2 potenciação de valor e o resultado passa a valer 16
+        n = n % 5 resto da divisão valor e o resultado passa a valer 1        
+    </p>
+    <p>
+        Simplificando o exemplo acima, só pode ser usa somente se for utilizado a mesma variável:
+        var n = 3
+        n += 4
+        n -= 5
+        n *= 4
+        n /= 2
+        n **= 2 
+        n %= 5
+    </p>
+    <p>
+        Operadores de incremento
+        var x = 5
+
+        x = x + 1  --> x += 1  --> x ++
+        x = x - 1  --> x -= 1  --> x --
+
+    </p>
+    <p>
+        Operadores relacionais
+        Para toda expressão que tenha um operador relacional ligado a ela, o resultado é booleano (verdadeiro ou falso (True or false)).
+
+        > maior que
+        < menor que
+        >= maior ou igual que
+        <= menor ou igual que
+        == igual
+        != não igual
+
+        Exemplo:
+
+        5 > 2 (True)
+        7 > 4 (False)
+        8 >= 8 (True)
+        9 <= 7 (false)
+        5 == 5 (True) 
+        4 != 4 (false)
+    </p>
+
+    <h2> lógicos </h2>
+    <p>
+        ! operador de "negação"
+        && operador "conjunção" é o "e" lógico
+        || operador "disjunção" é o "ou" lógico
+    </p>
+
+    <p>
+        Operador de negação "!"
+        É um operador unário, ou pode ser true ou false, sendo a negação do resultado
+
+        ! true -> false (lê-se uma coisa que não é verdadeira é falsa)
+        ! false -> True (lê-se uma coisa que não é falsa é verdadeira)
+
+    </p>
+
+    <p>
+        Operador de conjunção "&&"
+        É um operador binário, e tem dois valores lógico um de cada lado, sendo o valor "true" somente se as duas coisas foram verdadeiras, para as demais condições são falsas.
+
+        Exemplo:
+        true && true -> true (lê-se as duas são verdadeiras o resultado é verdadeiro)
+        true && false -> false
+        false && true -> false
+        false && false -> false 
+    </p>
+
+    <p>
+        Operador de conjunção "&&"
+        É um operador binário, e tem dois valores lógico um de cada lado, sendo o valor "true" somente se as duas coisas foram verdadeiras, para as demais condições são falsas.
+
+        Exemplo:
+        true && true -> true (lê-se as duas são verdadeiras o resultado é verdadeiro)
+        true && false -> false
+        false && true -> false
+        false && false -> false 
+    </p>
+
+    <p>
+        Operador de Disjunção "!!"
+        É um operador binário, e tem dois valores lógico um de cada lado, sendo o valor "true" se estiver em um dos lados ou os dois como verdadeiro.
+
+        Exemplo:
+        true || true -> true (lê-se as duas são verdadeiras o resultado é verdadeiro)
+        true || false -> true
+        false || true -> true
+        false || false -> false 
+    </p>
+
+    <p>
+        Precedência
+        A ordem de precedência é de cima para baixo
+        | -> () ** / ... (operadores aritiméticos)
+        | -> > < >= ... (Operadores relacionais, quem aparecer primeiro é feito primeiro, da esquerda para a direita)
+        | -> ! (por dim os operadores lógicos sendo este o 1º)
+        | -> && (por dim os operadores lógicos sendo este o 2º)
+        | -> || (por dim os operadores lógicos sendo este o 3º)        |
+        \/
+    </p>
+
+    <p> 
+        Operador Ternário
+
+        É o operador que junta 3 operandos, e é composto por 2 simbolos o "?" e o ":":
+
+        Exemplo: 
+
+        Ele tem três parte, sendo dividido por blocos,
+
+        teste ? true : false
+
+        média >= 7.0 ? "Aprovado" : "Reprovado" (lê-se a média é maior ou igual a 7? se for está "Aprovado", se não "Reprovado")
+
+    </p>
+
+</body>
+</html>

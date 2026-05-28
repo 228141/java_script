@@ -11,9 +11,53 @@
     </style>
 </head>
 <body>
+    <h1>Exemplo:</h1>
+    <p>
+    Observação: Você precisa converter o valor para número usando Number():
+    /*
     <script>
-        var real = window.prompt('Quantos reais você tem? ')
-        document.write(`Você tem ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'BR'})} reais`)
+    var real = Number(window.prompt('Quantos reais você tem? '))
+    
+    document.write(`Você tem ${real.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })}.`)
     </script>
+    */
+    <br>
+    //---------<br>
+    
+    comando para transformar em moeda (Real Brasil) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) <br>
+    mostra na tela: 'R$ 1,545.50' <br>
+    <br>
+
+    comando para transformar em moeda (Dolar) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) <br>
+    mostra na tela: 'US$ 1,545.50' <br>
+    <br>
+
+    comando para transformar em moeda (Euro) <br>
+    n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) <br>
+    mostra na tela: '€ 1,545.50'<br>
+
+    </p>
+
+    <script>
+        var real = Number(window.prompt('Quantos reais você tem? '))
+        document.write(`Você tem ${real.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })} reais.<br>`)
+        document.write(`Você tem ${real.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'USD'
+        })} dolares.<br>`)
+        document.write(`Você tem ${real.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'EUR'
+        })} euros.<br>`)
+    </script>
+
 </body>
 </html>
