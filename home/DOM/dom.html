@@ -3,18 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1.0"> // Atualiza a página a cada 1 segundo para refletir as mudanças feitas no código JavaScript, especialmente útil durante a prática de manipulação do DOM.
     <title>Document Object Model</title>
 </head>
 <body>
     <h1>Introdução DOM</h1>
-    <p>
-        Entendendo o DOM
+        Nesta aula, entederemos o conceito de DOM (Document Object Model), explicando que ele é um modelo de objetos para documentos que permite o acesso e a manipulação dos componentes internos de um website usando JavaScript.
+        <br>
+        Os principais tópicos abordados são:
 
-    </p>
+        Instalação de Extensões no VS Code: Para otimizar o desenvolvimento, o professor recomenda a instalação das extensões "Watch in Chrome" (2:35) para sincronização automática com o navegador, e "Node.js Extension Pack" (3:51) para executar JavaScript com o Node.
 
-    <h2>Árvore DOM</h2>
+        Ps: Ao invés do Watch in Chrome, atualmente utilizamos o Live Server!
 
-    <h2>Manipulando DOM</h2>
+        (8:49) O que é DOM? : O DOM é um acrônimo para Document Object Model e funciona como um conjunto de objetos no navegador que dá acesso aos componentes internos do site, não funcionando em ambientes como o Node.js.
+
+        (9:20) Árvore DOM : A aula explica a estrutura hierárquica do DOM, começando pelo objeto window (9:31) (a janela do navegador), que contém outros objetos como location (9:54), document (10:01) e history (10:05). Dentro do document, há o objeto html (10:24), que se divide em head (10:35) e body (10:37). 
+
+        O body contém os elementos visíveis do site, como h1, p e div, além de tags aninhadas como strong dentro de um parágrafo (11:19-11:33).
+
+        Manipulando o DOM (12:09): O professor demonstra como acessar e modificar elementos da página usando JavaScript. 
+        Exemplos incluem:
+        document.write() (12:48) para escrever diretamente no documento.
+        document.charset (13:10) para acesso ao conjunto de caracteres 
+
+        document.URL (13:36) para a URL atual.
+
+        Modificação de estilos, como a cor de fundo do body (18:21).
+
+        Métodos de Seleção de Elementos DOM (14:18): São apresentados cinco métodos principais para selecionar elementos:
+        Por Tag Name (getElementsByTagName) (14:52): Seleciona elementos pela sua tag HTML (ex: p, div). Retorna uma coleção de elementos, necessitando de um índice para acessar um específico (15:39).
+
+        Por ID (getElementById) (20:42): Seleciona um único elemento através do seu atributo id.
+
+        Por Nome (getElementsByName) (20:48): Seleciona elementos pelo seu atributo name. Retorna uma coleção, assim como getElementsByTagName.
+
+        Por Classe (getElementsByClassName) (21:12): Seleciona elementos pela sua classe CSS. Retorna uma coleção.
+
+        Por Seletor CSS (querySelector e querySelectorAll) (24:26): 
+        Métodos mais recentes e recomendados que utilizam a sintaxe de seletores CSS para selecionar elementos. querySelector retorna o primeiro elemento que corresponde ao seletor, enquanto querySelectorAll retorna todos os elementos correspondentes. 
+
+        O professor demonstra o uso de # para IDs e . para classes (25:01-25:43).
+
+        O professor enfatiza a importância de praticar e rever as aulas anteriores, especialmente a primeira, para compreender melhor a aplicação do DOM.
+
+        <h2>Exercícios</h2>
+        Questão 01: O que significa a sigla DOM?
+        Resposta: DOM significa Document Object Model, que é um modelo de objetos para documentos que permite o acesso e a manipulação dos componentes internos de um website usando JavaScript.
+
+        Questão 02: Sabe montar a árvore DOM de um site? (Ex: window > document > html > head e body > h1, p, div, etc)
+        Resposta: Sim, a árvore DOM é uma estrutura hierárquica que representa os elementos de um documento HTML. Ela começa com o objeto window, que contém o document. O document é o objeto raiz que representa a página web e contém os elementos html, head e body. O body, por sua vez, contém os elementos visíveis do site, como h1, p e div, além de tags aninhadas como strong dentro de um parágrafo.
+
+        Questão 03: O que são os  elementos Parent e os elementos Child no contexto do DOM?
+        Resposta: Os elementos Parent são os elementos que contêm outros elementos, enquanto os elementos Child são os elementos que estão dentro de outros elementos. Por exemplo, no DOM, o body é o elemento parent de um parágrafo (p), e o parágrafo é o elemento child do body.
+
+        Questão 04: Quais são os cinco principais métodos de seleção de elementos DOM dentro do JavaScript, e explique cada uma delas?
+        Resposta: Os cinco principais métodos de seleção de elementos DOM dentro do JavaScript são:
+        1. getElementById()
+        2. getElementsByClassName()
+        3. getElementsByName()
+        4. getElementsByTagName()
+        5. querySelector() e querySelectorAll()
+
+        Questão 05: Quais são os principais objetos que compõem a árvore DOM?
+        Resposta: Os principais objetos que compõem a árvore DOM são:
+        1. window
+        2. document
+        3. html
+        4. head
+        5. body
+        6. h1, p, div, etc.
+
+        Questão 06: Qual é a função do objeto window no DOM?
+        Resposta: O objeto window é o objeto raiz do DOM e representa a janela do navegador. Ele contém outros objetos como location, document e history, além de métodos e propriedades para manipular a janela do navegador.
+        
+        Para praticar a manipulação do DOM, o professor propõe os seguintes exercícios:
+        1. Criar um arquivo HTML com um título (h1) e um parágrafo (p). Usar JavaScript para alterar o texto do título e do parágrafo após a página carregar.
+        Resposta:   
+
+        2. Criar uma lista de itens (ul) com alguns elementos (li). Usar JavaScript para adicionar um novo item à lista quando um botão for clicado.
+        Resposta:   
+
+        3. Criar um formulário simples com um campo de texto e um botão. Usar JavaScript para exibir o valor do campo de texto em um alerta quando o botão for clicado.
+        Resposta:   
+
+        4. Criar um elemento div com uma classe CSS. Usar JavaScript para alterar a cor de fundo do div quando um evento de mouse ocorrer (ex: mouseover).  
+        Resposta:   
+
 
 </body>
 </html>
